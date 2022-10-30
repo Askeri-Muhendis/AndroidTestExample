@@ -4,14 +4,7 @@ import android.util.Patterns
 import androidx.lifecycle.ViewModel
 
 open class BaseViewModel : ViewModel() {
-    //şifre uzunlugu
-    fun passwordSizeUserMessage(password : String) : String{
-        return if (password.length >= 6){
-            "Şifre 6 haneden büyük"
-        }else {
-            "Şifre 6 haneden küçük"
-        }
-    }
+
 
     //null veya boşluk karakterinden mi oluşuyor
     fun nullOrEmptyCheck(inputEditText : String?) : Boolean{
