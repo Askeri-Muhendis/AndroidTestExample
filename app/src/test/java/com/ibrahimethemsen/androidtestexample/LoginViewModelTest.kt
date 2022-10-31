@@ -38,7 +38,7 @@ class LoginViewModelTest {
         //val loginViewModel = LoginViewModel()
 
         //when
-        val sonuc = viewModel.passwordSizeUserMessage("123")
+        val actual = viewModel.passwordSizeUserMessage("123")
         //expected -> beklenen, actual -> gerçek
         /*assertEquals(
             "Şifre 6 haneden küçük",
@@ -47,7 +47,7 @@ class LoginViewModelTest {
         //then
         //ters tirnak alt gr + ;
         assertThat(
-            sonuc,
+            actual,
             `is`("Şifre 6 haneden küçük")
         )
     }
@@ -57,10 +57,10 @@ class LoginViewModelTest {
         //given
         //val loginViewModel = LoginViewModel()
         //when
-        val funSonuc = viewModel.nullOrEmptyCheck("   ")
+        val actual = viewModel.nullOrEmptyCheck("   ")
         //then
         assertThat(
-            funSonuc,
+            actual,
             `is`(true)
         )
     }
@@ -70,14 +70,14 @@ class LoginViewModelTest {
         //given
         //val loginViewModel = LoginViewModel()
         //when
-        val fonksiyonSonuc = viewModel.epostaFormatCheck("asd")
+        val actual = viewModel.epostaFormatCheck("asd")
         //then
         /*assertEquals(
             "Şifre 6 haneden küçük",
             sonuc
         )*/
         assertThat(
-            fonksiyonSonuc,
+            actual,
             `is`(false)
         )
     }
@@ -90,10 +90,10 @@ class LoginViewModelTest {
         viewModel.userIsRegistered("deneme@gmail.com", "123")
         //val valueLiveData = viewModel.isLogginIn -> true yada false dönmüyor
 
-        val valueLiveData = viewModel.isLogginIn.getOrAwaitValue()
+        val actual = viewModel.isLogginIn.getOrAwaitValue()
         //then
         assertThat(
-            valueLiveData,
+            actual,
             `is`(true)
         )
     }

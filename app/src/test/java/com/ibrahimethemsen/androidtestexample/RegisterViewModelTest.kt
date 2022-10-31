@@ -3,6 +3,7 @@ package com.ibrahimethemsen.androidtestexample
 import com.ibrahimethemsen.androidtestexample.register.RegisterViewModel
 import org.hamcrest.CoreMatchers.`is`
 import org.hamcrest.MatcherAssert.assertThat
+import org.junit.Assert.assertEquals
 import org.junit.Test
 
 
@@ -12,10 +13,14 @@ class RegisterViewModelTest {
         //given
         val viewModel = RegisterViewModel()
         //when
-        val sonuc = viewModel.passwordValidation("1234","123")
+        val actual = viewModel.passwordValidation("1234","123")
         //then
+        assertEquals(
+            false,
+            actual
+        )
         assertThat(
-            sonuc,
+            actual,
             `is`(false)
         )
     }
@@ -25,10 +30,10 @@ class RegisterViewModelTest {
         //given
         val viewModel = RegisterViewModel()
         //when
-        val sonuc = viewModel.passwordValidationUserInfo("123","123")
+        val actual = viewModel.passwordValidationUserInfo("123","123")
         //then
         assertThat(
-            sonuc,
+            actual,
             `is`("Şifreler Aynı")
         )
     }
