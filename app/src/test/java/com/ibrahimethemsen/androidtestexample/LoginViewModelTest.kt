@@ -66,6 +66,19 @@ class LoginViewModelTest {
         //given
         //val loginViewModel = LoginViewModel()
         //when
+        val actual = viewModel.userIsRegistered("deneme@gmail.com", "123")
+        //then
+        assertThat(
+            actual,
+            `is`("Giriş Yapıldı")
+        )
+    }
+
+    @Test
+    fun userRegisteredLiveDataCheck() {
+        //given
+        //val loginViewModel = LoginViewModel()
+        //when
         viewModel.userIsRegistered("deneme@gmail.com", "123")
         //val valueLiveData = viewModel.isLogginIn -> true yada false dönmüyor
 
