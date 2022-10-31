@@ -31,27 +31,6 @@ class LoginViewModelTest {
         viewModel = LoginViewModel()
     }
 
-
-    @Test
-    fun passwordMinSize() {
-        //Given
-        //val loginViewModel = LoginViewModel()
-
-        //when
-        val actual = viewModel.passwordSizeUserMessage("123")
-        //expected -> beklenen, actual -> gerçek
-        /*assertEquals(
-            "Şifre 6 haneden küçük",
-            sonuc
-        )*/
-        //then
-        //ters tirnak alt gr + ;
-        assertThat(
-            actual,
-            `is`("Şifre 6 haneden küçük")
-        )
-    }
-
     @Test
     fun editTextInputEmpty() {
         //given
