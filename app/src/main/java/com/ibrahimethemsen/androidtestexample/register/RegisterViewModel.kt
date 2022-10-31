@@ -17,4 +17,13 @@ class RegisterViewModel : BaseViewModel() {
         }
     }
 
+    //şifre uzunlugu
+    fun passwordSizeUserMessage(password : String) : String{
+        return if (password.length >= 6){
+            "Şifre 6 haneden büyük"
+        }else {
+            "Şifre 6 haneden küçük"
+        }
+    }
+
 }

@@ -40,17 +40,15 @@ class RegisterViewModelTest {
 
     @Test
     fun passwordMinSize() {
-        //Given
+        //given
         val viewModel = RegisterViewModel()
-
         //when
         val actual = viewModel.passwordSizeUserMessage("123")
         //expected -> beklenen, actual -> gerçek
-        /*assertEquals(
+        assertEquals(
             "Şifre 6 haneden küçük",
-            sonuc
-        )*/
-
+            actual
+        )
         //then
         assertThat(
             actual,
